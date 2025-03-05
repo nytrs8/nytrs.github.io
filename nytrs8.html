@@ -1,0 +1,257 @@
+<html>
+<style>
+    *{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+body{
+    background-color: #c9d6ff;
+    background: linear-gradient(to right, #e2e2e2, #c9d6ff);
+}
+
+#disKatman{
+    width: 500px;
+    height: 500;
+    background-color: white;
+    border-radius: 20px;
+    position: absolute;
+    top: 20%;
+    left: 35%;
+    box-shadow: 0px 0px 30px white;
+    transition: 0s;
+}
+
+#girisYapin{
+font-size: 50px;
+position: absolute;
+left: 23%;
+top: -5%;
+opacity: 0%;
+}
+
+#isim{
+    background-color: #EAEAEA;
+    color: rgb(124, 138, 255);
+    border: none;
+    position: absolute;
+    top: 25%; 
+    left: 18%;
+    width: 300px;
+    height: 50px;
+    border-radius: 20px;
+    outline: none;
+    background: #EAEAEA;
+    opacity: 0%;
+}
+#isim:focus{
+border: 2px solid rgb(124, 138, 255);
+}
+#sifre{
+    background-color: #EAEAEA;
+    color: rgb(124, 138, 255);
+    border: none;
+    position: absolute;
+    top:45%; 
+    left: 18%;
+    width: 300px;
+    height: 50px;
+    border-radius: 20px;
+    outline: none;
+    background: #EAEAEA;
+    opacity: 0%;
+}
+#sifre:focus{
+border: 2px solid rgb(124, 138, 255);
+}
+#girisBtn{
+    position: absolute;
+    top:65%; 
+    left: 33%;
+    width: 150px;
+    height: 50px;
+    border: none;
+    background-color: #2f5ef6;
+    transition: 0.5s;
+    color: white;
+    border-radius: 50px;
+    opacity: 0%;
+}
+#girisBtn:hover
+{
+    background-color: #2645b8;
+    transition: 0.5s;
+}
+
+#hataMesaj{
+    opacity: 0%;
+    color: red;
+    position: absolute;
+    top:90%; 
+    left: 30%;
+}
+
+
+
+#msifre1{
+    position: absolute;
+    left: 22%;
+    top: 0%;
+    opacity: 0%;
+}
+#msifre2{
+    position: absolute;
+    left: 20%;
+    top: 25%;
+    opacity: 0%;
+}
+#msifre3{
+    position: absolute;
+    left: 12%;
+    top: 50%;
+    opacity: 0%;
+}
+</style>
+<body>
+<div></div>
+
+<div id="disKatman">
+
+    <div><h1 id="girisYapin">Giriş Yapın</h1></div>
+    <input type="email" id="isim"  placeholder="&nbsp; Adınız"><br><br>
+    <input type="password" id="sifre"  placeholder="&nbsp; Şifreniz"><br>
+    <button id="girisBtn"onclick="kontrol()">Kayıt Ol</button>
+    <div id="hataMesaj">İncele Yapmaya Ne Dersin?</div>
+
+    <h1 id="msifre1"></h1>
+    <h1 id="msifre2"></h1>
+    <h1 id="msifre3"></h1>
+
+</div>
+
+
+
+
+
+
+
+
+<script>
+setTimeout(girisinYazilariAcilis, 200);
+function girisinYazilariAcilis(){
+        document.getElementById("girisYapin").style.position="absolute";
+        document.getElementById("girisYapin").style.top="0%";
+        document.getElementById("girisYapin").style.opacity="100%";
+        document.getElementById("girisYapin").style.transition="0.5s";
+
+        document.getElementById("isim").style.position="absolute";
+        document.getElementById("isim").style.top="35%";
+        document.getElementById("isim").style.opacity="100%";
+        document.getElementById("isim").style.transition="0.5s";
+
+        document.getElementById("sifre").style.position="absolute";
+        document.getElementById("sifre").style.top="55%";
+        document.getElementById("sifre").style.opacity="100%";
+        document.getElementById("sifre").style.transition="0.5s";
+
+        document.getElementById("girisBtn").style.position="absolute";
+        document.getElementById("girisBtn").style.top="75%";
+        document.getElementById("girisBtn").style.opacity="100%";
+        document.getElementById("girisBtn").style.transition="0.5s";
+        
+    }
+function kontrol()
+{
+    var isim  = document.getElementById("isim").value;
+    var sifre  = document.getElementById("sifre").value;
+
+    if(isim =="umut" && sifre== "msi")
+    {
+        setTimeout(sifreOrtaminiHazirla,200);
+    }
+    else{
+        document.getElementById("hataMesaj").style.opacity= "100%";
+    }
+}
+
+
+
+function sifreOrtaminiHazirla()
+{
+    var katman = document.getElementById("disKatman").style;
+        katman.width = "850px";
+        katman.height = "550px";
+        katman.transition="0.5s";
+        katman.left = "27%";
+
+        document.getElementById("girisYapin").style.position="absolute";
+        document.getElementById("girisYapin").style.top="-5%";
+        document.getElementById("girisYapin").style.opacity="0%";
+        document.getElementById("girisYapin").style.transition="0.5s";
+
+        document.getElementById("isim").style.position="absolute";
+        document.getElementById("isim").style.top="25%";
+        document.getElementById("isim").style.opacity="0%";
+        document.getElementById("isim").style.transition="0.5s";
+
+        document.getElementById("sifre").style.position="absolute";
+        document.getElementById("sifre").style.top="45%";
+        document.getElementById("sifre").style.opacity="0%";
+        document.getElementById("sifre").style.transition="0.5s";
+
+        document.getElementById("girisBtn").style.position="absolute";
+        document.getElementById("girisBtn").style.top="65%";
+        document.getElementById("girisBtn").style.opacity="0%";
+        document.getElementById("girisBtn").style.transition="0.5s";
+
+
+
+        setTimeout(sifreleriGoster,200);
+        setTimeout(sifeeleriAnimasyonla1,400);
+        setTimeout(sifeeleriAnimasyonla2,600);
+        setTimeout(sifeeleriAnimasyonla3,800);
+}
+
+function sifreleriGoster()
+{
+        document.getElementById("msifre1").innerHTML  = "İstanbul Medipol Üniversitesi";
+        document.getElementById("msifre2").innerHTML  = "mebisrepository.medipol.edu.tr";
+        document.getElementById("msifre3").innerHTML  = "FFCDBD41C45F0D0CBA60E6F6FA0B1C47";
+}
+
+
+
+function sifeeleriAnimasyonla1()
+{
+    var msifre1 = document.getElementById("msifre1").style;
+
+    msifre1.position="absolute";
+    msifre1.top="10%";
+    msifre1.opacity="100%";
+    msifre1.transition="0.5s";
+}
+function sifeeleriAnimasyonla2()
+{
+    var msifre2 = document.getElementById("msifre2").style;
+
+
+    msifre2.position="absolute";
+    msifre2.top="35%";
+    msifre2.opacity="100%";
+    msifre2.transition="0.5s";
+
+    msifre3.position="absolute";
+    msifre3.top="60%";
+    msifre3.opacity="100%";
+    msifre3.transition="0.5s";
+}
+function sifeeleriAnimasyonla3()
+{
+    var msifre3 = document.getElementById("msifre3").style;
+
+    msifre3.position="absolute";
+    msifre3.top="60%";
+    msifre3.opacity="100%";
+    msifre3.transition="0.5s";
+}
+</script>
+</body>
+</html>
